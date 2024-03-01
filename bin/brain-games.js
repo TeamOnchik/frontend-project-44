@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-import greetingsOfUser from '../src/cli.js';
-import firstGame from './brain-even.js';
-import calcGame from './brain-calc.js';
+//import brainEven from './brain-even.js';
+//import brainCalc from './brain-calc.js';
+//import brainGcd from './brain-gcd.js';
+//import brainProgression from './brain-progression.js';
+//import brainPrime from './brain-prime.js';
 
-console.log('Welcome to the Brain Games!');
-
-greetingsOfUser();
-
-//firstGame();
-
-calcGame();
+//brainEven();
+//brainCalc();
+//brainGcd();
+//brainProgression();
+//brainPrime();
