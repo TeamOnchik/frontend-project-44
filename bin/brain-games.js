@@ -1,12 +1,5 @@
 #!/usr/bin/env node
-//import brainEven from './brain-even.js';
-//import brainCalc from './brain-calc.js';
-//import brainGcd from './brain-gcd.js';
-//import brainProgression from './brain-progression.js';
-//import brainPrime from './brain-prime.js';
+// eslint-disable-next-line import/no-named-as-default
+import userName from '../src/cli.js';
 
-//brainEven();
-//brainCalc();
-//brainGcd();
-//brainProgression();
-//brainPrime();
+userName();
