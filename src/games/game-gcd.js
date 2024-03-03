@@ -1,23 +1,25 @@
 import { getRandomNumber } from '../utils/randomNumber.js';
 
-const gameGcd = () => {
-  let randomNumberF = getRandomNumber(1, 100);
-  let randomNumberS = getRandomNumber(1, 100);
-  const question = (`${randomNumberF} ${randomNumberS}`);
+export const rulesOfGame = 'Find the greatest common divisor of given numbers.';
 
-  while (randomNumberF !== 0 && randomNumberS !== 0) {
-    if (randomNumberF > randomNumberS) {
-      // eslint-disable-next-line operator-assignment
-      randomNumberF = randomNumberF % randomNumberS;
+const isGreatest = (randomNumberFirst, randomNumberSecond) => {
+  let randomFirst = randomNumberFirst;
+  let randomSecond = randomNumberSecond;
+  while (randomFirst !== 0 && randomSecond !== 0) {
+    if (randomFirst > randomSecond) {
+      randomFirst %= randomSecond;
     } else {
-      // eslint-disable-next-line operator-assignment
-      randomNumberS = randomNumberS % randomNumberF;
+      randomSecond %= randomFirst;
     }
   }
+  return (randomFirst + randomSecond);
+};
 
-  const correctAnswer = randomNumberF + randomNumberS;
+export const gameGcd = () => {
+  const NumberFirst = getRandomNumber(1, 100);
+  const NumberSecond = getRandomNumber(1, 100);
+  const question = (`${NumberFirst} ${NumberSecond}`);
+  const correctAnswer = isGreatest(NumberFirst, NumberSecond);
 
   return [question, correctAnswer];
 };
-
-export default gameGcd;

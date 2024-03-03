@@ -1,5 +1,6 @@
 import { getRandomNumber } from '../utils/randomNumber.js';
 
+export const rulesOfGame = 'What is the result of the expression?';
 const signs = ['+', '-', '*'];
 
 const calculate = (firstNumber, secondNumber, sign) => {
@@ -15,7 +16,7 @@ const calculate = (firstNumber, secondNumber, sign) => {
   }
 };
 
-const gameCalc = () => {
+export const gameCalc = () => {
   const operator = signs[getRandomNumber(0, signs.length - 1)];
   const number1 = getRandomNumber(1, 10);
   const number2 = getRandomNumber(1, 10);
@@ -24,5 +25,3 @@ const gameCalc = () => {
   const correctAnswer = calculate(number1, number2, operator).toString();
   return [question, correctAnswer];
 };
-
-export default gameCalc;

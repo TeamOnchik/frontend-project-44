@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
-import gamePrime from '../src/games/game-prime.js';
-import { gameEngine } from '../src/index.js';
-
-const rulesOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+import { gamePrime, rulesOfGame } from '../src/games/game-prime.js';
+import gameEngine from '../src/index.js';
 
 gameEngine(gamePrime, rulesOfGame);
