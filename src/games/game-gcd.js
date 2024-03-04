@@ -12,14 +12,14 @@ const isGreatest = (randomNumberFirst, randomNumberSecond) => {
       randomSecond %= randomFirst;
     }
   }
-  return (randomFirst + randomSecond);
+  return randomFirst + randomSecond;
 };
 
 export const gameGcd = () => {
-  const NumberFirst = getRandomNumber(1, 100);
-  const NumberSecond = getRandomNumber(1, 100);
-  const question = (`${NumberFirst} ${NumberSecond}`);
-  const correctAnswer = isGreatest(NumberFirst, NumberSecond);
+  const numberFirst = getRandomNumber(1, 100);
+  const numberSecond = getRandomNumber(1, 100);
+  const question = `${numberFirst} ${numberSecond}`;
+  const correctAnswer = isGreatest(numberFirst, numberSecond);
 
   return [question, correctAnswer];
 };
